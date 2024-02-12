@@ -1,15 +1,17 @@
-
+import CreateTask from './components/create-task/create-task';
+import Header from './components/header/header';
 
 import './assets/styles/global.scss';
-import Header from './components/header/header';
+import  './App.scss';
 
 function App() {
   return (
     <>
       <Header />
 
-      
-      <p>Starting project...</p>
+      <main>
+        <CreateTask />
+      </main>
     </>
   )
 }
