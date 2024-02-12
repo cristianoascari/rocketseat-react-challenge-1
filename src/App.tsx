@@ -1,9 +1,12 @@
+import todoLogo from '/todo.svg';
+
 import './assets/styles/global.scss';
 
 function App() {
   return (
     <>
-      Starting project...
+      <img src={todoLogo} />
+     <p>Starting project...</p>
     </>
   )
 }
