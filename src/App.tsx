@@ -1,12 +1,15 @@
-import todoLogo from '/todo.svg';
+
 
 import './assets/styles/global.scss';
+import Header from './components/header/header';
 
 function App() {
   return (
     <>
-      <img src={todoLogo} />
-     <p>Starting project...</p>
+      <Header />
+
+      
+      <p>Starting project...</p>
     </>
   )
 }
