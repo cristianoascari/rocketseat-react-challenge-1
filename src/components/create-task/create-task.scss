@@ -7,7 +7,7 @@
   flex: 1;
   gap: 8px;
   justify-content: center;
-  margin-top: -1.69rem;
+  margin: -1.69rem 2rem 0;
 
   form {
     flex: 1;
@@ -42,7 +42,6 @@
       caret-color: $color-blue;
       color: $color-gray-100;
       flex: 1;
-      max-width: 38rem;
       outline-color: $color-gray-500;
       padding: 1rem;
 
