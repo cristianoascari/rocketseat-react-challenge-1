@@ -26,7 +26,7 @@ function App() {
     setCompletedTasks(completed);
   }
 
-  /*function handleToggleTask(id: number) {
+  function handleToggleTask(id: number) {
     const newTasks = tasks.map(task => {
       if (task.id === id) {
         task.completed = !task.completed;
@@ -35,12 +35,14 @@ function App() {
     });
 
     setTasks(newTasks);
+
+    updateCompletedTasks();
   }
 
   function handleRemoveTask(id: number) {
     const newTasks = tasks.filter(task => task.id !== id);
     setTasks(newTasks);
-  }*/
+  }
 
   return (
     <>
@@ -58,7 +60,13 @@ function App() {
 
         {!tasks.length && <NoTasks />}
 
-        {tasks.length > 0 && <Tasks />}
+        {tasks.length > 0 && (
+          <Tasks
+            tasks={tasks}
+            onRemoveTask={handleRemoveTask}
+            onToggleTask={handleToggleTask}
+          />
+        )}
       </main>
     </>
   )
