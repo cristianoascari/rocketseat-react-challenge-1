@@ -1,0 +1,54 @@
+@import '../../assets/styles/global.scss';
+
+.create-task {
+  align-items: stretch;
+  display: flex;
+  height: 3.375rem;
+  flex: 1;
+  gap: 8px;
+  justify-content: center;
+  margin-top: -1.69rem;
+
+  form {
+    flex: 1;
+    gap: 8px;
+
+    button {
+      align-items: center;
+      background-color: $color-blue-dark;
+      border: none;
+      border-radius: 8px;
+      color: $color-gray-100;
+      cursor: pointer;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      width: 90px;
+
+      &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      &:hover {
+        background-color: $color-blue;
+      }
+    }
+
+    input {
+      background-color: $color-gray-500;
+      border: none;
+      border-radius: 8px;
+      caret-color: $color-blue;
+      color: $color-gray-100;
+      flex: 1;
+      max-width: 38rem;
+      outline-color: $color-gray-500;
+      padding: 1rem;
+
+      &:focus {
+        outline-color: $color-gray-400;
+      }
+    }
+  }
+}
