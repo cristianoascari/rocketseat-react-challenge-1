@@ -13,9 +13,17 @@ import './App.scss';
 
 function App() {
   const [tasks, setTasks] = useState<TaskItem[]>([]);
+  const [completedTasks, setCompletedTasks] = useState<number>(0);
 
   function handleCreateTask(task: TaskItem) {
     setTasks([...tasks, task]);
+
+    updateCompletedTasks();
+  }
+
+  function updateCompletedTasks() {
+    const completed = tasks.filter(task => task.completed).length;
+    setCompletedTasks(completed);
   }
 
   /*function handleToggleTask(id: number) {
@@ -43,7 +51,10 @@ function App() {
           onCreateTask={handleCreateTask}
         />
 
-        <Resume />
+        <Resume
+          completedTasks={completedTasks}
+          tasks={tasks}
+        />
 
         {!tasks.length && <NoTasks />}
 
