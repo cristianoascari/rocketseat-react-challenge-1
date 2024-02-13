@@ -1,0 +1,13 @@
+@import '../../assets/styles/global.scss';
+
+header {
+  background-color: $color-gray-700;
+  display: flex;
+  justify-content: center;
+  padding: 4.75rem 0;
+
+  .logo {
+    height: 48px;
+    width: 126px;
+  }
+}
