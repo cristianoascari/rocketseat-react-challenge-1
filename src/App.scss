@@ -1,5 +1,6 @@
 main {
   flex-direction: column;
   margin: 0 auto;
-  width: 46rem;
+  max-width: 46rem;
+  width: calc(100vw - 6rem);
 }
