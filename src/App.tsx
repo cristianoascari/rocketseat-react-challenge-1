@@ -41,7 +41,10 @@ function App() {
 
   function handleRemoveTask(id: number) {
     const newTasks = tasks.filter(task => task.id !== id);
+      
     setTasks(newTasks);
+
+    setCompletedTasks(completedTasks - 1);
   }
 
   return (
