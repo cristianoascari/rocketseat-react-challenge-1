@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 import CreateTask from './components/create-task/create-task';
 import Header from './components/header/header';
@@ -39,7 +39,9 @@ function App() {
     updateCompletedTasks();
   }
 
-  function handleRemoveTask(id: number) {
+  function handleRemoveTask(event: FormEvent, id: number) {
+    event.stopPropagation();
+
     const newTasks = tasks.filter(task => task.id !== id);
       
     setTasks(newTasks);

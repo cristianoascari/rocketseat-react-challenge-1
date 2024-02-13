@@ -8,12 +8,15 @@
   .task {
     background-color: $color-gray-500;
     border-radius: .5rem;
+    cursor: pointer;
     justify-content: space-between;
     padding: 1rem;
 
     .task-item {
       align-items: center;
+      cursor: pointer;
       flex-direction: row;
+      flex-grow: 1;
       gap: .5rem;
 
       input {
@@ -52,6 +55,8 @@
 
       label {
         color: $color-gray-100;
+        cursor: pointer;
+        flex-grow: 1;
 
         &.completed {
           color: $color-gray-300;
