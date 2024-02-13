@@ -44,7 +44,8 @@ function App() {
       
     setTasks(newTasks);
 
-    setCompletedTasks(completedTasks - 1);
+    const newCompletedTasksCount: number = completedTasks - 1;
+    setCompletedTasks(newCompletedTasksCount > 0 ? newCompletedTasksCount : 0);
   }
 
   return (
