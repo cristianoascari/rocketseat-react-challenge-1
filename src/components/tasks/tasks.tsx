@@ -3,11 +3,12 @@ import { CgTrash } from "react-icons/cg";
 import { TaskItem } from '../../shared/models/task.model';
 
 import './tasks.scss';
+import { FormEvent } from "react";
 
 interface TasksProps {
   tasks: TaskItem[];
   onToggleTask: (taskId:  number) => void;
-  onRemoveTask: (taskId:  number) => void;
+  onRemoveTask: (event:  FormEvent, taskId:  number) => void;
 
 }
 
@@ -16,7 +17,7 @@ export default function Tasks({tasks, onToggleTask, onRemoveTask}: TasksProps) {
     <section className="tasks">
       {tasks.map(task => {
         return (
-          <div key={task.id} className="task">
+          <div key={task.id} className="task" onClick={() => onToggleTask(task.id)}>
             <div className="task-item">
               <input
                 checked={task.completed}
@@ -30,7 +31,7 @@ export default function Tasks({tasks, onToggleTask, onRemoveTask}: TasksProps) {
               </label>
             </div>
 
-            <button onClick={() => onRemoveTask(task.id)}>
+            <button onClick={(event) => onRemoveTask(event, task.id)}>
               <CgTrash />
             </button>
           </div>
