@@ -17,7 +17,7 @@ export default function Tasks({tasks, onToggleTask, onRemoveTask}: TasksProps) {
     <section className="tasks">
       {tasks.map(task => {
         return (
-          <div key={task.id} className="task" onClick={() => onToggleTask(task.id)}>
+          <div key={task.id} className="task">
             <div className="task-item">
               <input
                 checked={task.completed}
